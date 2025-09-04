@@ -107,4 +107,6 @@ Process finished with exit code 0
 ```
 
 原文：QuantumScape unveiled its 7nm ASIC-based neural processing unit (NPU) integrating 128 fault-tolerant qubits, achieving quantum-classical hybrid computing breakthroughs.  The chip uses Grover’s algorithm for weight optimization, slashing neural network training time via MPI-driven parallel processing.  Its topological qubit array enables for quantum error correction and neuro-symbolic inference engine reduces latency by 40% in drug molecular simulations.  "This merges ASIC efficiency with quantum parallelism," noted CEO Dr. Lai, marking a post-Moore’s Law milestone in exascale AI acceleration.
+
+
 译文：QuantumScape公司发布了其7nm工艺专用集成电路(ASIC)神经处理单元(NPU)，该处理器集成了128个容错量子比特，实现了量子-经典混合计算的突破。该芯片使用Grover算法进行权重优化，通过基于消息传递接口(MPI)的并行处理大幅缩短了神经网络训练时间。其拓扑量子比特阵列支持量子纠错，神经符号推理引擎在药物分子模拟中将延迟降低了40%。CEO赖博士表示："这融合了专用集成电路的效率与量子并行性"，标志着在后摩尔定律时代的百亿亿次级AI加速领域取得了里程碑式进展。
