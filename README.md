@@ -1,7 +1,30 @@
 # TranslationAgent
-利用AI Agent实现英译中
+利用AI Agent实现英译中。
 
-demo如下：
+### 整体结构
+
+![结构](./img.png)
+
+1. 文本预处理：流程始于文本预处理，对输入的英文文本进行清理和标准化。此阶段修正拼写和语法错误，删除填充词，修正不当连字符使用，并规范化间距。目标是确保 AI 处理干净、格式规范的输入文本。
+  
+2. 术语提取：接下来，系统分析预处理后的文本，识别专业领域并提取关键技术术语。这对保持技术翻译的一致性和准确性至关重要。AI 会识别如"ASIC"、"NPU"或"量子经典混合计算"等术语，并提供其中文对应词。
+   
+3. 翻译：确定术语后，系统执行实际翻译。AI 作为领域专家，运用提取的术语确保技术准确性，同时生成自然流畅的中文文本。如果是迭代过程，系统还会结合前次审查的反馈。
+   
+4. 审查与迭代：译文由另一个担任中文技术编辑的 AI 进行严格审查。此阶段评估流畅度、准确性、简洁性、风格一致性和逻辑连贯性。根据审查结果，系统决定继续优化译文或将其定为最终版本。
+
+### 文件作用
+
+graph.py: 定义工作流图和节点连接
+
+nodes.py: 实现各工作流阶段的处理逻辑
+
+state.py: 定义维护翻译状态的数据结构
+
+prompts.py:包含各翻译阶段的 AI 提示词
+
+### 演示demo
+
 ```
 开始翻译流程
 用户输入: QuantumScape unveiled its 7nm ASIC-based neural processing unit (NPU) integrating 128 fault-tolerant qubits, achieving quantum-classical hybrid computing breakthroughs.  The chip uses Grover’s algorithm for weight optimization, slashing neural network training time via MPI-driven parallel processing.  Its topological qubit array enables for quantum error correction and neuro-symbolic inference engine reduces latency by 40% in drug molecular simulations.  "This merges ASIC efficiency with quantum parallelism," noted CEO Dr. Lai, marking a post-Moore’s Law milestone in exascale AI acceleration.
